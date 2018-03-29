@@ -1,5 +1,37 @@
+# class Author
+#   define_method("some_method") do
+#     puts "Some details"
+#   end
+# end
+
+# author = Author.new
+# author.some_method
+
+# class Author
+#   def fiction_details(arg)
+#     puts "Fiction"
+#     puts arg
+#     puts "something else..."
+#   end
+
+#   def coding_details(arg)
+#     puts "Coding"
+#     puts arg
+#     puts "something else..."
+#   end
+
+#   def history_details(arg)
+#     puts "History"
+#     puts arg
+#     puts "something else..."
+#   end
+# end
+
+# author = Author.new
+# author.fiction_details "Cal Newport"
+
 class Author
-  genres = %w(fiction history coding textbook)
+  genres = %w(fiction history coding)
 
   genres.each do |genre|
     define_method("#{genre}_details") do |arg|
@@ -11,4 +43,4 @@ class Author
 end
 
 author = Author.new
-author.textbook_details "Hello Textbook"
+author.coding_details "Ayn Rand"
