@@ -28,7 +28,7 @@
 # end
 
 # author = Author.new
-# author.fiction_details "Cal Newport"
+# author.coding_details "Cal Newport"
 
 class Author
   genres = %w(fiction history coding)
@@ -43,4 +43,6 @@ class Author
 end
 
 author = Author.new
-author.coding_details "Ayn Rand"
+author.fiction_details "Ayn Rand"
+author.coding_details "Cal Newport"
+p author.respond_to?(:history_details)
